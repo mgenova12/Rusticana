@@ -14,20 +14,23 @@
  *= require_self
  */
 
-.logo img {
+/*.logo img {
   height: 70px;
-}
+}*/
 
 .imageOne {
-    width: 100%;
-    position: relative;
-    top:75px;
+  width: 100%;
+  margin-top:75px;
+}
+
+iframe {
+  margin-top:75px;
 }
 
 .imageTwo {
-    width: 100%;
+  width: 100%;
 }
 
 .imageThree {
-    width: 100%;
+  width: 100%;
 }
