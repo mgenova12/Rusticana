@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/home' => 'home#index'
+  get '/' => 'home#index'
   get '/menu' => 'home#menu'
   get '/locations' => 'home#locations'
   get '/about' => 'home#about'
