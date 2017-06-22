@@ -17,3 +17,17 @@
 .logo img {
   height: 70px;
 }
+
+.imageOne {
+    width: 100%;
+    position: relative;
+    top:75px;
+}
+
+.imageTwo {
+    width: 100%;
+}
+
+.imageThree {
+    width: 100%;
+}
