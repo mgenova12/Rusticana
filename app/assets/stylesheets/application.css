@@ -14,9 +14,23 @@
  *= require_self
  */
 
-/*.logo img {
-  height: 70px;
-}*/
+.overlay {
+   background:transparent; 
+   position:relative; 
+   width:100%;
+   height:600px; /* your iframe height */
+   top:600px;  /* your iframe height */
+   margin-top:-600px;  /* your iframe height */
+}
+
+.overlay2 {
+   background:transparent; 
+   position:relative; 
+   width:100%;
+   height:650px; /* your iframe height */
+   top:650px;  /* your iframe height */
+   margin-top:-650px;  /* your iframe height */
+}
 
 .imageOne {
   width: 100%;
