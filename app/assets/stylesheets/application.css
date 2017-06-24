@@ -53,3 +53,25 @@
 .imageThree {
   width: 100%;
 }
+
+.about-company-item img {
+  /*margin-bottom: 100px;*/
+  height: 250px;
+  width: 350px;
+  margin: 10px 10px 0px 0px;
+}
+.about-company-item img.wrap-right {
+  float: right;
+}
+
+.about-company-item img.wrap-left {
+  float: left;
+}
+
+.about-company-item {
+  max-width: 900px !important;
+}
+
+
+
+
