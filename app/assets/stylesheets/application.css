@@ -72,6 +72,11 @@
   max-width: 900px !important;
 }
 
+.nav img:hover {
+  opacity: 0.3;
+}
 
-
+.banner {
+  /*background-image: url('/assets/rusticanalogocrop.jpg') !important;*/
+}
 
