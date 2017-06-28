@@ -53,6 +53,10 @@
 .imageThree {
   width: 100%;
 }
+.about-company {
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
 
 .about-company-item img {
   /*margin-bottom: 100px;*/
@@ -77,6 +81,14 @@
 }
 
 .banner {
-  /*background-image: url('/assets/rusticanalogocrop.jpg') !important;*/
+  background-image: url('/assets/tableCloth.jpg') !important;
+}
+
+.breadcrumb {
+  margin-bottom: 20px !important;
+}
+
+.banner h2 {
+  /*margin-bottom: 30px !important;*/
 }
 
