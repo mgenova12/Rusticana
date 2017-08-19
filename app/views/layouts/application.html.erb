@@ -207,6 +207,14 @@
                 <!-- Social Media  -->
                 <div class="social">
                   <a href="https://www.facebook.com/RusticanaPizzas/" class="facebook"><i class="fa fa-facebook"></i></a>
+
+                <hr/>
+                <% if !current_user %>
+                  <a href="/employee_login"><h6>Employee Login</h6></a>
+                <% else %>
+                  <a href="/logout"><h6>Logout</h6></a>
+
+                <% end%>
   <!--                 <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
                   <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
                   <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a> -->
