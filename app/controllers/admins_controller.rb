@@ -1,8 +1,11 @@
 class AdminsController < ApplicationController
-  
-  def index 
+  before_action :authenticate_user!
 
-    render 'index.html.erb'
+  def index 
+    @specials = Special.all
+
+
+    render layout: false
   end
 
 end

@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(name: 'admin', email: 'admin@email', password_digest: BCrypt::Password.create('password'))
+# User.create(name: 'admin', email: 'admin@email', password_digest: BCrypt::Password.create('password'))
+
+Special.create(name: 'Pizza Steak', description: 'cheesesteak with sauce and cheese')
+Special.create(name: 'Cheese Pizza', description: 'cheesesteak with sauce and cheese')
+Special.create(name: 'Pasta', description: 'cheesesteak with sauce and cheese')

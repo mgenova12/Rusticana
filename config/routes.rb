@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
 
   get "admin_panel" => 'admins#index'
+  
+  
+  # get "admin_panel/edit" => 'admins#edit'
 
   # resources :photos, only: [:new, :create, :index, :destroy]
 end
