@@ -1,32 +1,22 @@
-    <!-- Styles -->
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link href="css/settings.css" rel="stylesheet">   
-    <!-- FlexSlider Css -->
-    <link rel="stylesheet" href="css/flexslider.css" media="screen" />
-    <!-- Portfolio CSS -->
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <!-- Font awesome CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet"> 
-    <!-- Custom Less -->
-    <link href="css/less-style.css" rel="stylesheet"> 
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
-
-
-<style type="text/css">
-  .btn span.glyphicon {         
-  opacity: 0;       
-}
-.btn.active span.glyphicon {        
-  opacity: 1;       
-}
-</style>
-
-
-
+<!-- Styles -->
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+<link href="css/settings.css" rel="stylesheet">   
+<!-- FlexSlider Css -->
+<link rel="stylesheet" href="css/flexslider.css" media="screen" />
+<!-- Portfolio CSS -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<!-- Font awesome CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet"> 
+<!-- Custom Less -->
+<link href="css/less-style.css" rel="stylesheet"> 
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet">
+<!--[if IE]><link rel="stylesheet" href="css/ie-style.css"><![endif]-->
+    <div id='app'>
       <div class="header">
         <div class="container">
           <!-- Header top area content -->
@@ -81,16 +71,12 @@
   <div class="row">
     <div class="col-lg-6">
       <h2>Specials </h2>
-      <% @specials.each do |special| %>
-        <div class='well'>
+        <div v-for="special in specials" v-on:click="selectSpecial(special)" class='well'>
 
-          <h3><%= special.name %> </h3>
-          <h5><%= special.description %></h5>
-        
-
-
+          <h3>{{special.name}}</h3>
+          <h5>{{special.description}}</h5>
+          
         </div>
-      <% end %>
     </div><!-- /.col-lg-6 -->
     <div class="col-lg-6">
       <h2>Users </h2>
@@ -100,6 +86,6 @@
   </div><!-- /.row -->
 
 </div>
-
+</div>
 
 

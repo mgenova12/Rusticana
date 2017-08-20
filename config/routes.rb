@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   get "admin_panel" => 'admins#index'
   
   
-  # get "admin_panel/edit" => 'admins#edit'
+  namespace :api do 
+    namespace :v1 do 
+      get '/specials' => 'specials#index'
 
-  # resources :photos, only: [:new, :create, :index, :destroy]
+    end
+  end
+
 end
