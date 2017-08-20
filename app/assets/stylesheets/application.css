@@ -15,6 +15,14 @@
  */
 
 
+.borderComplete {
+  border: solid 3px green !important;
+}
+
+.well {
+  cursor: pointer;
+}
+
 .menu .menu-details ul li span{ 
   width: 50px !important;
 }

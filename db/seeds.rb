@@ -9,6 +9,6 @@
 
 # User.create(name: 'admin', email: 'admin@email', password_digest: BCrypt::Password.create('password'))
 
-Special.create(name: 'Pizza Steak', description: 'cheesesteak with sauce and cheese')
-Special.create(name: 'Cheese Pizza', description: 'cheesesteak with sauce and cheese')
-Special.create(name: 'Pasta', description: 'cheesesteak with sauce and cheese')
+# Special.create(name: 'Cheese Steak', description: 'cheesesteak with sauce and cheese')
+# Special.create(name: 'Parm', description: 'cheesesteak with sauce and cheese')
+# Special.create(name: 'Cheese Fries', description: 'cheesesteak with sauce and cheese')
