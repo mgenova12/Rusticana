@@ -307,7 +307,7 @@
  
         
         <!-- Dishes Start -->
-          
+      <div id='app'>
         <div class="dishes padd">
           <div class="container">
             <!-- Default Heading -->
@@ -317,12 +317,12 @@
               <!-- Heading -->
               <h2>Our Specials</h2>
               <!-- Paragraph -->
-              <p>Choose from our wide variety of classic Italian dishes.</p>
+              <p>Avaliable Monday-Friday 11am-2pm</p>
               <!-- Border -->
               <div class="border"></div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-sm-6"> 
+              <div class="col-md-4 col-sm-7"> 
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
@@ -337,38 +337,16 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Spagetti and Sausage Pasta</h3>
+                    <h3>Cheese Slices</h3>
                     <!-- Paragraph -->
-                    <p>Spagetti with a side of sausage covered with our marinara sauce </p>
+                    <p>Two slices of cheese and a drink</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="dishes-item-container">
-                  <!-- Image Frame -->
-                  <div class="img-frame">
-                    <!-- Image -->
-                    <img src="/assets/galleryFoods/RegularStromboli.JPG" class="img-responsive" alt="" />
-                    <!-- Block for on hover effect to image -->
-                    <div class="img-frame-hover">
-                      <!-- Hover Icon -->
-                      <a href="/menu"><i class="fa fa-cutlery"></i></a>
-                    </div>
-                  </div>
-                  <!-- Dish Details -->
-                  <div class="dish-details">
-                    <!-- Heading -->
-                    <h3>Regular Stromboli</h3>
-                    <!-- Paragraph -->
-                    <p>Handmade stromboli filled with ham, salami, bologna, cappicola, mozzerella and sauce </p>
-                    <!-- Button -->
-                    <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
+
+              <div class="col-md-4 col-sm-7">
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
@@ -383,15 +361,15 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Pizza Burger</h3>
+                    <h3>{{selectedSpecials[0].name}}</h3>
                     <!-- Paragraph -->
-                    <p>A burger topped with tomato sauce and melted cheese.</p>
+                    <p>{{selectedSpecials[0].description}}</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-7">
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
@@ -406,9 +384,9 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Garlic Knots</h3>
+                    <h3>{{selectedSpecials[1].name}}</h3>
                     <!-- Paragraph -->
-                    <p>Hand tied garlic knots covered in garlic butter and served witha side of sauce</p>
+                    <p>{{selectedSpecials[0].description}}</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
@@ -417,7 +395,7 @@
             </div>
           </div>          
         </div>
-        
+      </div>
         <!-- Dishes End -->
         
         <!-- menu Start -->

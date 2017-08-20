@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       get '/specials' => 'specials#index'
-
+      get '/specials/:id' => 'specials#show'
+      put '/specials/:id' => 'specials#update'
     end
   end
 
