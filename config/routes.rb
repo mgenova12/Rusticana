@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   post "/employee_login" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
-  get "admin_panel" => 'admins#index'
+  get "/admin_panel" => 'admins#index'
   
+  resources :specials, only: [:new, :create, :destroy]
   
   namespace :api do 
     namespace :v1 do 

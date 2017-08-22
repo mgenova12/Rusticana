@@ -1,4 +1,10 @@
 class Special < ApplicationRecord
-  has_attached_file :image, styles: { small: "64x64", med: "100x100", large: "200x200" }
+  has_attached_file :image
+  validates_attachment :image,
+                       content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :image, presence: true
 
 end

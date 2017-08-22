@@ -3,7 +3,7 @@ class Api::V1::SpecialsController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
   def index 
-    @specials = Special.all
+    @specials = Special.all.order(:id)
 
     render 'index.json.jbuilder'
   end
