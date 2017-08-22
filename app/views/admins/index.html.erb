@@ -7,9 +7,12 @@
       <!-- <div > -->
         <div class="col-lg-5" v-for="special in specials" v-on:click="selectSpecial(special)" v-bind:class="{well: true, borderComplete:special.selected}">
           <img v-bind:src="special.image_file_url" height="100" width="100">
-          <h3>{{special.name}}</h3>
-          <h5>{{special.description}}</h5>
-          <h5>{{special.image_file_name}}</h5>
+
+              <h5>{{special.image_file_name}}</h5>
+              <h3>{{special.name}}</h3>
+              <h5>{{special.description}}</h5>
+              <a v-bind:href="'/specials/' + special.id +'/edit'" class="btn-sm btn-primary">EDIT</a>
+
         </div>
       </div>
          

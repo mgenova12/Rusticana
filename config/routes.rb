@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get "/admin_panel" => 'admins#index'
   
-  resources :specials, only: [:new, :create, :destroy]
+  resources :specials, only: [:new, :create, :update, :edit, :destroy]
   
   namespace :api do 
     namespace :v1 do 

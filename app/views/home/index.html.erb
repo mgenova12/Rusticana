@@ -351,7 +351,7 @@
                   <!-- Image Frame -->
                   <div class="img-frame">
                     <!-- Image -->
-                    <img src="/assets/galleryFoods/PizzaBurger.JPG" class="img-responsive" alt="" />
+                    <img v-bind:src="selectedSpecials[0].image_file_url" class="img-responsive" alt="" />
                     <!-- Block for on hover effect to image -->
                     <div class="img-frame-hover">
                       <!-- Hover Icon -->
@@ -374,7 +374,7 @@
                   <!-- Image Frame -->
                   <div class="img-frame">
                     <!-- Image -->
-                    <img src="/assets/galleryFoods/GarlicKnots.JPG" class="img-responsive" alt="" />
+                    <img v-bind:src="selectedSpecials[1].image_file_url" class="img-responsive" alt="" />
                     <!-- Block for on hover effect to image -->
                     <div class="img-frame-hover">
                       <!-- Hover Icon -->
@@ -386,7 +386,7 @@
                     <!-- Heading -->
                     <h3>{{selectedSpecials[1].name}}</h3>
                     <!-- Paragraph -->
-                    <p>{{selectedSpecials[0].description}}</p>
+                    <p>{{selectedSpecials[1].description}}</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
