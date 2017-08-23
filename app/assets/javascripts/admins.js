@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     methods: {
       selectSpecial: function(special) {
         special.selected = !special.selected;
-        document.getElementById("chooseTwo").innerHTML = ''
+        document.getElementById("saveMessage").innerHTML = ''
         console.log(this.selectedSpecials)
 
         this.selectedSpecials.push(special);
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       saveSpecials: function() {
         console.log(this.selectedSpecials[0].selected)
         if (this.selectedSpecials.length === 2){
-          document.getElementById("chooseTwo").innerHTML = 'SAVED!';
+          document.getElementById("saveMessage").innerHTML = 'SAVED!';
           for(var i=0; i<this.selectedSpecials.length; i++){
             if(this.selectedSpecials[i].selected === true ){
               $.ajax({
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
           }
         } else {
-          document.getElementById("chooseTwo").innerHTML = 'You must choose two specials!';
+          document.getElementById("saveMessage").innerHTML = 'You must choose two specials!';
         }
 
       }

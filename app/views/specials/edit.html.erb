@@ -20,9 +20,14 @@
         <%= f.text_area :description, placeholder: "#{@special.description}", class: 'form-control' %>
       </div>
 
-      <%= f.submit 'Upload', class: 'btn btn-primary' %>
+      <%= f.submit 'EDIT', class: 'btn btn-primary' %>
+
     <% end %>
 
+  <%= form_tag "/specials/#{@special.id}", method: :delete do %>
 
+    <button class='btn btn-danger'> DELETE</button>
+  <% end %>
+</div>
 
 </div>

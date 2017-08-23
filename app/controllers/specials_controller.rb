@@ -1,5 +1,5 @@
 class SpecialsController < ApplicationController
-
+  before_action :authenticate_user!
   layout "admin"
 
   def new
@@ -21,7 +21,6 @@ class SpecialsController < ApplicationController
 
 
   def create
-
     @photo = Special.new(photo_params)
     if @photo.save
       flash[:success] = "The photo was added!"
@@ -30,6 +29,14 @@ class SpecialsController < ApplicationController
       render 'new'
     end
 
+  end
+
+  def destroy 
+    @special = Special.find(params[:id])
+
+    @special.destroy
+
+    redirect_to '/admin_panel'
   end
 
   private
