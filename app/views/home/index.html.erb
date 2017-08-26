@@ -126,7 +126,7 @@
 
             <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="600" >
               <!-- MAIN IMAGE -->
-              <img src="img/slider/transparent.png" style="background-color:#fea501" alt=""  data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat">
+              <img src="/assets/rusticanaInside.jpg" alt=""  data-bgfit="cover" data-bgposition="center bottom" data-bgrepeat="no-repeat">
               <!-- LAYERS NR. 1 -->
               <div class="tp-caption lfl"
                 data-x="left"
@@ -147,7 +147,8 @@
                 data-easing="Power4.easeOut"
                 data-endspeed="300"
                 data-endeasing="Linear.easeNone"
-                data-captionhidden="off">Specials
+                data-captionhidden="off"
+                style='color:red !important;' > Specials
               </div>
               <!-- LAYER NR. 3 -->
               <div class="tp-caption whitedivider3px customin customout tp-resizeme"
@@ -166,22 +167,19 @@
                 style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">&nbsp;
               </div>
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption finewide_medium_white randomrotate customout tp-resizeme"
-                data-x="right" data-hoffset="-10"
-                data-y="245" data-voffset="0"
-                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+             <div class="tp-caption lfr modern_big_redbg br-green "
+                data-x="right"
+                data-hoffset="-10"
+                data-y="245"
                 data-speed="1000"
                 data-start="2700"
-                data-easing="Power3.easeInOut"
-                data-splitin="chars"
-                data-splitout="chars"
-                data-elementdelay="0.08"
-                data-endelementdelay="0.08"
-                data-endspeed="500"
-                style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">Cheese Slices
-              </div>
+                data-easing="Power4.easeOut"
+                data-endspeed="300"
+                data-endeasing="Linear.easeNone"
+                data-captionhidden="off">Cheese Slices
+              </div> 
               <!-- LAYER NR. 5 -->
-              <div class="tp-caption finewide_verysmall_white_mw white customin customout tp-resizeme text-right paragraph"
+  <!--             <div class="tp-caption finewide_verysmall_white_mw white customin customout tp-resizeme text-right paragraph"
                 data-x="right" data-hoffset="-10"
                 data-y="300" 
                 data-customin="x:0;y:50;z:0;rotationX:-120;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 0%;"
@@ -194,8 +192,8 @@
                 data-elementdelay="0.2"
                 data-endelementdelay="0.08"
                 data-endspeed="300"
-                style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap;">Try our two slice lunch special! Comes with a drink of your choice! <br />Monday - Friday 10:30 - 2pm
-              </div>
+                style="z-index: 10; color:green !important; max-width: auto; max-height: auto; white-space: nowrap;">Try our two slice lunch special! Comes with a drink of your choice! <br />Monday - Friday 10:30 - 2pm
+              </div> -->
             </li>
             <li data-transition="cube" data-slotamount="7" data-masterspeed="600" >
               <!-- MAIN IMAGE -->
@@ -306,7 +304,7 @@
  
         
         <!-- Dishes Start -->
-          
+      <div id='app'>
         <div class="dishes padd">
           <div class="container">
             <!-- Default Heading -->
@@ -314,19 +312,19 @@
               <!-- Crown image -->
               <img class="img-responsive" src="img/crown.png" alt="" />
               <!-- Heading -->
-              <h2>Our Dishes</h2>
+              <h2>Our Specials</h2>
               <!-- Paragraph -->
-              <p>Choose from our wide variety of classic Italian dishes.</p>
+              <p>Avaliable Monday-Friday 11am-2pm</p>
               <!-- Border -->
               <div class="border"></div>
             </div>
             <div class="row">
-              <div class="col-md-3 col-sm-6"> 
+              <div class="col-md-4 col-sm-7"> 
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
                     <!-- Image -->
-                    <img src="/assets/galleryFoods/SausagePasta.JPG" class="img-responsive" alt="" />
+                    <img src="/assets/2slices.jpg" class="img-responsive" alt="" />
                     <!-- Block for on hover effect to image -->
                     <div class="img-frame-hover">
                       <!-- Hover Icon -->
@@ -336,20 +334,21 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Spagetti and Sausage Pasta</h3>
+                    <h3>Cheese Slices</h3>
                     <!-- Paragraph -->
-                    <p>Spagetti with a side of sausage covered with our marinara sauce </p>
+                    <p>Two slices of cheese and a drink</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
+
+              <div class="col-md-4 col-sm-7">
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
                     <!-- Image -->
-                    <img src="/assets/galleryFoods/RegularStromboli.JPG" class="img-responsive" alt="" />
+                    <img v-bind:src="selectedSpecials[0].image_file_url" class="img-responsive" alt="" />
                     <!-- Block for on hover effect to image -->
                     <div class="img-frame-hover">
                       <!-- Hover Icon -->
@@ -359,20 +358,20 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Regular Stromboli</h3>
+                    <h3>{{selectedSpecials[0].name}}</h3>
                     <!-- Paragraph -->
-                    <p>Handmade stromboli filled with ham, salami, bologna, cappicola, mozzerella and sauce </p>
+                    <p>{{selectedSpecials[0].description}}</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-7">
                 <div class="dishes-item-container">
                   <!-- Image Frame -->
                   <div class="img-frame">
                     <!-- Image -->
-                    <img src="/assets/galleryFoods/PizzaBurger.JPG" class="img-responsive" alt="" />
+                    <img v-bind:src="selectedSpecials[1].image_file_url" class="img-responsive" alt="" />
                     <!-- Block for on hover effect to image -->
                     <div class="img-frame-hover">
                       <!-- Hover Icon -->
@@ -382,32 +381,9 @@
                   <!-- Dish Details -->
                   <div class="dish-details">
                     <!-- Heading -->
-                    <h3>Pizza Burger</h3>
+                    <h3>{{selectedSpecials[1].name}}</h3>
                     <!-- Paragraph -->
-                    <p>A burger topped with tomato sauce and melted cheese.</p>
-                    <!-- Button -->
-                    <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="dishes-item-container">
-                  <!-- Image Frame -->
-                  <div class="img-frame">
-                    <!-- Image -->
-                    <img src="/assets/galleryFoods/GarlicKnots.JPG" class="img-responsive" alt="" />
-                    <!-- Block for on hover effect to image -->
-                    <div class="img-frame-hover">
-                      <!-- Hover Icon -->
-                      <a href="/menu"><i class="fa fa-cutlery"></i></a>
-                    </div>
-                  </div>
-                  <!-- Dish Details -->
-                  <div class="dish-details">
-                    <!-- Heading -->
-                    <h3>Garlic Knots</h3>
-                    <!-- Paragraph -->
-                    <p>Hand tied garlic knots covered in garlic butter and served witha side of sauce</p>
+                    <p>{{selectedSpecials[1].description}}</p>
                     <!-- Button -->
                     <a href="/menu" class="btn btn-danger btn-sm">View Menu</a>
                   </div>
@@ -416,7 +392,7 @@
             </div>
           </div>          
         </div>
-        
+      </div>
         <!-- Dishes End -->
         
         <!-- menu Start -->

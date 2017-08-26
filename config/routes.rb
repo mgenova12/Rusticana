@@ -6,5 +6,23 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/gallery' => 'home#gallery'
 
-  # resources :photos, only: [:new, :create, :index, :destroy]
+  # get "/signup" => "users#new"
+  post "/users" => "users#create"
+
+  get "/employee_login" => "sessions#new"
+  post "/employee_login" => "sessions#create"
+  get "/logout" => "sessions#destroy"
+
+  get "/admin_panel" => 'admins#index'
+  
+  resources :specials, only: [:new, :create, :update, :edit, :destroy]
+  
+  namespace :api do 
+    namespace :v1 do 
+      get '/specials' => 'specials#index'
+      get '/specials/:id' => 'specials#show'
+      put '/specials/:id' => 'specials#update'
+    end
+  end
+
 end
