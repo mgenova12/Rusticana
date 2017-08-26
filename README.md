@@ -19,7 +19,7 @@ Rusticana Pizza uses a number of open source projects to work properly:
 
 # Screenshots
 
-![alt text]()
+![alt text](https://cdn.rawgit.com/mgenova12/Rusticana/c03f8fb2/app/assets/images/rusticanaWebsitePic.png)
 
 # Features
 * Menu/Gallery/About pages 
