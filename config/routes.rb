@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/about' => 'home#about'
   get '/gallery' => 'home#gallery'
 
-  # get "/signup" => "users#new"
   post "/users" => "users#create"
 
   get "/employee_login" => "sessions#new"
@@ -14,6 +13,8 @@ Rails.application.routes.draw do
   get "/logout" => "sessions#destroy"
 
   get "/admin_panel" => 'admins#index'
+
+  get '/apply' => 'apply#index'
   
   resources :specials, only: [:new, :create, :update, :edit, :destroy]
   
