@@ -4,7 +4,6 @@ class AdminsController < ApplicationController
 
   def index 
     @specials = Special.all
-
   end
 
 
