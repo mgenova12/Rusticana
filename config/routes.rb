@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/admin_panel' => 'admins#index'
 
   get '/apply/new' => 'applies#new'
-  # post '/apply' => 'applies#create'
+  post '/apply' => 'applies#create'
 
   resources :specials, only: [:new, :create, :update, :edit, :destroy]
   

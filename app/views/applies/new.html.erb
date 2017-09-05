@@ -1,0 +1,132 @@
+
+
+<%= bootstrap_form_for @apply , url: apply_path(@apply), html: { method: :post } do |f| %>
+
+  <div class='container'>
+    <h2>Personal Information </h2>
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :first_name%>
+        <%= f.text_field :address%>
+        <%= f.text_field :zip %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :last_name %>
+        <%= f.text_field :city %>
+        <%= f.date_field :date_of_birth %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.phone_field :phone_number %>
+        <%= f.text_field :state %>
+        <%= f.text_field :eighteen_or_older, label: "Are you 18 or older?" %>
+      </div>
+    </div>
+
+    <%= f.text_field :prevented, label: "Are you prevented from lawfully becoming employed in this country because of visa or immigration status?" %>
+
+    <h2>Employment Desired </h2>
+    <div class='row'>
+      <div class="col-sm-6">
+        <%= f.text_field :position %>
+        <%= f.text_field :currently_employed, label: "Are you employed now?"%>
+        <%= f.text_field :employment_salary, label: "$/hr desired " %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.text_field :start_date %>
+        <%= f.text_field :employed_where, label: "If so, where are you employed?" %>
+        <%= f.text_field :qpplied_before, label: "Ever applied to this company before?" %>
+      </div>
+    </div>
+      
+    <h2>Former Employers </h2>
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :former_employer1, label: "Name of former employer" %>
+        <%= f.text_field :former_employer2, label: "Name of former employer" %>
+        <%= f.text_field :former_employer3, label: "Name of former employer" %>
+        </div>
+        <div class="col-sm-3"> 
+        <%= f.text_field :former_salery1, label: "Salary" %>
+        <%= f.text_field :former_salery2, label: "Salary"  %>
+        <%= f.text_field :former_salery3, label: "Salary"  %>
+        </div>
+        <div class="col-sm-3"> 
+        <%= f.text_field :former_positon1, label: "Position" %>
+        <%= f.text_field :former_positon2, label: "Position" %>
+        <%= f.text_field :former_positon3, label: "Position" %>
+        </div>
+        <div class="col-sm-3">
+        <%= f.text_field :reason_for_leaving1, label: "Reason for leaving" %> 
+        <%= f.text_field :reason_for_leaving2, label: "Reason for leaving" %> 
+        <%= f.text_field :reason_for_leaving3, label: "Reason for leaving" %>
+        </div>
+    </div>
+      
+    <h2>Education </h2>
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :high_school %>
+        <%= f.text_field :college %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :hs_years_attended, label: "Number of years attended" %>
+        <%= f.text_field :college_years, label: "Number of years attended" %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :hs_graduate, label: "Did you graduate?" %>
+        <%= f.text_field :college_graduate, label: "Did you graduate?" %>
+      </div>
+    </div>
+
+    <h2>References </h2>
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_name1, label: "Name" %>
+        <%= f.text_field :reference_name2, label: "Name" %>
+        <%= f.text_field :reference_name3, label: "Name" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_address1, label: "Address" %>
+        <%= f.text_field :reference_address2, label: "Address" %>
+        <%= f.text_field :reference_address3, label: "Address" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_business1, label: "Business" %>
+        <%= f.text_field :reference_business2, label: "Business" %>
+        <%= f.text_field :reference_business3, label: "Business" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_years1, label: "Years acquainted" %>  
+        <%= f.text_field :reference_year2, label:"Years acquainted" %>  
+        <%= f.text_field :reference_years3, label: "Years acquainted" %>  
+      </div>
+    </div>
+
+    <h2>General </h2>
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :special_skills %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :activites %>
+        </div>
+      <div class="col-sm-4">
+        <%= f.text_field :military, label: "U.S. Military or Naval service" %>
+      </div>
+    </div>
+      
+      <%= f.text_field :comment%>
+
+      <%= f.submit "Submit" %>
+  </div>
+
+<% end %>
+
+            
+            
+            
+
+            
+            
+            
+            
