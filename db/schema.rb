@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905144819) do
+ActiveRecord::Schema.define(version: 20170906025721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170905144819) do
     t.string   "employment_salary"
     t.string   "currently_employed"
     t.string   "employed_where"
-    t.string   "qpplied_before"
+    t.string   "applied_before"
     t.string   "former_employer1"
     t.string   "former_salery1"
     t.string   "former_positon1"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20170905144819) do
     t.string   "reference_name2"
     t.string   "reference_address2"
     t.string   "reference_business2"
-    t.string   "reference_year2"
+    t.string   "reference_years2"
     t.string   "reference_name3"
     t.string   "reference_address3"
     t.string   "reference_business3"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20170905144819) do
     t.string   "special_skills"
     t.string   "activites"
     t.string   "military"
-    t.string   "comment"
+    t.string   "comments"
   end
 
   create_table "specials", force: :cascade do |t|
