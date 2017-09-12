@@ -6,15 +6,15 @@ class AppliesController < ApplicationController
   end
 
   def create 
-    @application = Apply.new(application_params)
+    @apply = Apply.new(application_params)
 
-    if @application.save
+    if @apply.save
       flash[:success] = "Your application has been submitted"
       send_email_mailgun
-      redirect_to '/apply/new'
+      redirect_to '/apply'
     else 
-      redirect_to '/apply/new'
-      flash[:danger] = @application.errors.full_messages
+      flash[:danger] = @apply.errors.full_messages
+      render :new
     end
   end
 
