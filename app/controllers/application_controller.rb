@@ -9,5 +9,12 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     redirect_to '/employee_login' unless current_user
   end
+
+  # def restrict_api_access
+  #   authenticate_or_request_with_http_token do |api_key, options|
+  #     false
+  #   end
+
+  # end
   
 end

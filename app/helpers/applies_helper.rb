@@ -1,2 +1,5 @@
 module AppliesHelper
+
+
+  
 end

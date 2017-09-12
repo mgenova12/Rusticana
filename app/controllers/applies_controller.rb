@@ -1,4 +1,6 @@
 class AppliesController < ApplicationController
+  include ApplyHelper
+
   def new 
     @apply = Apply.new
   end
@@ -8,6 +10,7 @@ class AppliesController < ApplicationController
 
     if @application.save
       flash[:success] = "Your application has been submitted"
+      send_email_mailgun
       redirect_to '/apply/new'
     else 
       redirect_to '/apply/new'
