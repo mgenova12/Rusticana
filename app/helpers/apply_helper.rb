@@ -4,7 +4,7 @@ module ApplyHelper
     mg_client = Mailgun::Client.new(ENV["MAILGUN_API_KEY"])
 
     message_params =  {
-      from: 'mgenova03@gmail.com',
+      from: 'rusticanamail@gmail.com',
       to:   'mgenova03@gmail.com',
       subject: "Rusticana Application",
       html:  "
