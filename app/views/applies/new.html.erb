@@ -74,7 +74,7 @@
     <hr>
     <div class='row'>
       <div class="col-sm-6">
-        <%= f.text_field :position %>
+      <%= f.select :position, [["Server", "Server"], ["Cook", "Cook"],["Counter Person", "Counter Person"], ["Dishwasher", "Dishwasher"]], { label: "Position:" }, { class: "selectpicker" } %>
       </div>
       <div class="col-sm-6">
         <%= f.text_field :start_date %>
