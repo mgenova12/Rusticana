@@ -1,11 +1,10 @@
 
 <div class= "container">
 
-    <h2>Specials </h2>
+    <h1>Specials </h1>
 
     <h3 id='saveMessage'> </h3>
     <div class='row' overflow='auto'>
-      <!-- <div > -->
         <div class="col-lg-6" v-for="special in specials" v-on:click="selectSpecial(special)" v-bind:class="{well: true, borderComplete:special.selected}">
           <img v-bind:src="special.image_file_url" height="100" width="100">
               <span class='col-md-1'>
@@ -16,7 +15,6 @@
                 <h5>{{special.description}}</h5>
               <a v-bind:href="'/specials/' + special.id +'/edit'" class="btn-sm btn-primary">EDIT</a>
               </span>
-
         </div>
       </div>
          

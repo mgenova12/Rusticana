@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/admin_panel' => 'admins#index'
+  get '/admin_panel/applications' => 'admins#applications'
+  get '/admin_panel/applications/:id' => 'admins#applications_show'
 
   get '/apply' => 'applies#new'
   post '/apply' => 'applies#create'
