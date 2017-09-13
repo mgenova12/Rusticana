@@ -10,7 +10,7 @@ module ApplyHelper
       html:  "
       <p> You have a new application from <b>#{@apply[:first_name]} #{@apply[:last_name]} </b> for the position of <b>#{@apply[:position]}</b>.<p>
         
-        <a href='http://localhost:3000/admin_panel/applications'><button>View Application</button></a>
+        <a href='http://www.rusticanapizza.com/admin_panel/applications'><button>View Application</button></a>
       "
 
       }
