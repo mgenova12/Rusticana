@@ -1,0 +1,73 @@
+
+<div class= "container">
+  <h1><%= @application.first_name.capitalize %>'s Application</h1>
+
+  <h3>Personal Information</h3>
+  <hr>
+  <p>First Name: <%= @application.first_name %></p>
+  <p>Last Name: <%= @application.last_name %></p>
+  <p>Address: <%= @application.address %></p>
+  <p>City: <%= @application.city %></p>
+  <p>State: <%= @application.state %></p>
+  <p>Phone Number: <%= @application.phone_number %></p>
+  <p>Date of Birth: <%= pretty_date(@application.date_of_birth) %></p>
+  <p>Are you 18 or older?: <%= @application.eighteen_or_older %></p>
+  <p>Are you prevented from lawfully becoming employed?: <%= @application.prevented %></p>
+
+  <h3>Employment Desired </h3>
+  <hr>
+  <p>Position: <%= @application.position %></p>
+  <p>Start Date: <%= @application.start_date %></p>
+  <p>Salary: <%= @application.employment_salary %></p>
+  <p>Currently Employed: <%= @application.currently_employed %></p>
+  <p>Employeed at: <%= @application.employed_where %></p>
+  <p>Have you applied before?: <%= @application.applied_before %></p>
+
+  <h3>Former Employers </h3>
+  <hr>
+  <p>Former Employer1: <%= @application.former_employer1 %></p>
+  <p>Former Salery1: <%= @application.former_salery1 %></p>
+  <p>Former Position1: <%= @application.former_positon1 %></p>
+  <p>Reason for leaving1: <%= @application.reason_for_leaving1 %></p>
+  <p>Former Employer2: <%= @application.former_employer2 %></p>
+  <p>Former Salery2: <%= @application.former_salery2 %></p>
+  <p>Former Position2: <%= @application.former_positon2 %></p>
+  <p>Reason for leaving2: <%= @application.reason_for_leaving2 %></p>
+  <p>Former Employer3: <%= @application.former_employer3 %></p>
+  <p>Former Salery3: <%= @application.former_salery3 %></p>
+  <p>Former Position3: <%= @application.former_positon3 %></p>
+  <p>Reason for leaving3: <%= @application.reason_for_leaving3 %></p>
+
+  <h3>Education </h3>
+  <hr>
+  <p>High School: <%= @application.high_school %></p>
+  <p>Years attended: <%= @application.hs_years_attended %></p>
+  <p>Did you graduate?: <%= @application.hs_graduate %></p>
+  <p>College: <%= @application.college %></p>
+  <p>Years attended: <%= @application.college_years %></p>
+  <p>Did you graduate?: <%= @application.college_graduate %></p>
+
+  <h3>References </h3>
+  <hr> 
+  <p>Reference Name1: <%= @application.reference_name1 %></p>
+  <p>Reference Address1: <%= @application.reference_address1 %></p>
+  <p>Reference Business1: <%= @application.reference_business1 %></p>
+  <p>Reference Years1: <%= @application.reference_years1 %></p>
+  <p>Reference Name2: <%= @application.reference_name2 %></p>
+  <p>Reference Address2 <%= @application.reference_address2 %></p>
+  <p>Reference Business2: <%= @application.reference_business2 %></p>
+  <p>Reference Years2: <%= @application.reference_years2 %></p>
+  <p>Reference Name3: <%= @application.reference_name3 %></p>
+  <p>Reference Address3: <%= @application.reference_address3 %></p>
+  <p>Reference Business3: <%= @application.reference_business3 %></p>
+  <p>Reference Years3: <%= @application.reference_years3 %></p>
+
+  <h3>General </h3>
+  <hr>
+  <p>Special Skills: <%= @application.special_skills %></p>
+  <p>Activites <%= @application.activites %></p>
+  <p>Military: <%= @application.military %></p>
+  <p>Comments: <%= @application.comments %></p>
+
+
+</div>

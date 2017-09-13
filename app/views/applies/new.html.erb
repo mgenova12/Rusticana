@@ -1,0 +1,259 @@
+
+
+<% flash.each do |name, message| %>
+  <div class="alert alert-<%= name %> alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <% if message.is_a?(Array) %>
+    <p>Please correct the following:</p>
+      <ul>
+        <% message.each do |m| %>
+          <li><%= m %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p><%= message %></p>
+    <% end %>
+  </div>
+<% end %>
+
+
+<%= bootstrap_form_for @apply , url: apply_path(@apply), html: { method: :post } do |f| %>
+
+
+  <div class='container'>
+    <h2>Personal Information </h2>
+    <hr>
+
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :first_name%>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :last_name %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.phone_field :phone_number %>
+      </div>
+    </div>
+  
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :address%>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :city %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :state %>
+      </div>
+    </div>
+            
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :zip %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.date_field :date_of_birth %>
+      </div>
+      <div class="col-sm-4">
+        <h5> Are you 18 or older?</h5>
+        <%= f.form_group :eighteen_or_older do %>
+          <%= f.radio_button :eighteen_or_older, 'Yes', label: "Yes", inline: true %>
+          <%= f.radio_button :eighteen_or_older, 'No', label: "No", inline: true %>
+        <% end %>
+      </div>
+    </div>
+    <%= f.form_group :prevented, label: { text: "Are you prevented from lawfully becoming employed in this country because of visa or immigration status?" } do %>
+          <%= f.radio_button :prevented, 'Yes', label: "Yes"%>
+          <%= f.radio_button :prevented, 'No', label: "No" %>
+    <% end %>
+
+    <h2>Employment Desired </h2>
+    <hr>
+    <div class='row'>
+      <div class="col-sm-6">
+      <%= f.select :position, [["Server", "Server"], ["Cook", "Cook"],["Counter Person", "Counter Person"], ["Dishwasher", "Dishwasher"]], { label: "Position:" }, { class: "selectpicker" } %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.text_field :start_date %>
+      </div>
+    </div>
+    
+    <div class='row'>
+      <div class="col-sm-6">
+        <%= f.text_field :currently_employed, label: "Are you employed now?"%>
+      </div>
+      <div class="col-sm-6">
+        <%= f.text_field :employed_where, label: "If so, where are you employed?" %>
+      </div>
+    </div>        
+
+    <div class='row'>
+      <div class="col-sm-6">
+        <%= f.text_field :employment_salary, label: "$/hr desired " %>
+      </div>
+      <div class="col-sm-6">
+        <%= f.text_field :applied_before, label: "Ever applied to this company before?" %>
+      </div>
+    </div>
+      
+    <h2>Former Employers </h2>
+    <hr>
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :former_employer1, label: "Name of former employer" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :former_salery1, label: "Salary" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :former_positon1, label: "Position" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reason_for_leaving1, label: "Reason for leaving" %> 
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :former_employer2, label: "Name of former employer" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :former_salery2, label: "Salary" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :former_positon2, label: "Position" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reason_for_leaving2, label: "Reason for leaving" %> 
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :former_employer3, label: "Name of former employer" %>
+        </div>
+        <div class="col-sm-3"> 
+        <%= f.text_field :former_salery3, label: "Salary"  %>
+        </div>
+        <div class="col-sm-3"> 
+        <%= f.text_field :former_positon3, label: "Position" %>
+        </div>
+        <div class="col-sm-3">
+        <%= f.text_field :reason_for_leaving3, label: "Reason for leaving" %>
+        </div>
+    </div>
+      
+    <h2>Education </h2>
+    <hr>
+
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :high_school %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :hs_years_attended, label: "Number of years attended" %>
+      </div>
+      <div class="col-sm-4">
+        <h5>Did you graduate?<h5>
+        <%= f.form_group :hs_graduate do %>
+          <%= f.radio_button :hs_graduate, 'Yes', label: "Yes", inline: true%>
+          <%= f.radio_button :hs_graduate, 'No', label: "No", inline: true %>
+        <% end %>
+      </div>
+    </div>
+            
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :college %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :college_years, label: "Number of years attended" %>
+      </div>
+      <div class="col-sm-4">
+      <h5>Did you graduate?<h5>
+      <%= f.form_group :college_graduate do %>
+        <%= f.radio_button :college_graduate, 'Yes', label: "Yes", inline: true %>
+        <%= f.radio_button :college_graduate, 'No', label: "No", inline: true %>
+      <% end %>
+      </div>
+    </div>
+
+    <h2>References </h2>
+    <hr>
+
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_name1, label: "Name" %>
+      </div>
+      <div class="col-sm-3"> 
+        <%= f.text_field :reference_address1, label: "Address" %>
+      </div>
+      <div class="col-sm-3"> 
+        <%= f.text_field :reference_business1, label: "Business" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_years1, label: "Years acquainted" %>  
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_name2, label: "Name" %>
+      </div>
+      <div class="col-sm-3"> 
+        <%= f.text_field :reference_address2, label: "Address" %>
+      </div>
+      <div class="col-sm-3"> 
+        <%= f.text_field :reference_business2, label: "Business" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_years2, label: "Years acquainted" %>  
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_name3, label: "Name" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_address3, label: "Address" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_business3, label: "Business" %>
+      </div>
+      <div class="col-sm-3">
+        <%= f.text_field :reference_years3, label: "Years acquainted" %>  
+      </div>
+    </div>
+
+    <h2>General </h2>
+    <hr>
+    <div class='row'>
+      <div class="col-sm-4">
+        <%= f.text_field :special_skills %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :activites %>
+        </div>
+      <div class="col-sm-4">
+        <%= f.text_field :military, label: "U.S. Military or Naval service" %>
+      </div>
+    </div>
+      
+      <%= f.text_field :comments%>
+
+      <%= f.submit "Submit" %>
+  </div>
+
+<% end %>
+    
+
+            
+            
+
+            
+            
+            

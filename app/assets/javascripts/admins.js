@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     mounted: function() {
     $.get('/api/v1/specials', function(response) {
         this.specials = response;
-        console.log(this.specials)
       
         for(i=0; i<this.specials.length; i++){
           if(this.specials[i].selected === true){
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
           }
         }
 
-        console.log(this.selectedSpecials)
       }.bind(this));
 
     },
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       selectSpecial: function(special) {
         special.selected = !special.selected;
         document.getElementById("saveMessage").innerHTML = ''
-        console.log(this.selectedSpecials)
 
         this.selectedSpecials.push(special);
 
@@ -42,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       },
 
       saveSpecials: function() {
-        console.log(this.selectedSpecials[0].selected)
         if (this.selectedSpecials.length === 2){
           document.getElementById("saveMessage").innerHTML = 'SAVED!';
           for(var i=0; i<this.selectedSpecials.length; i++){
