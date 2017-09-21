@@ -14,4 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require vue
+//= require custom
+//= require themepunchtools
+//= require themepunchrevolution
+//= require flexslider
+//= require html5shiv
+//= require prettyPhoto
+//= require respond
 //= require_tree .
