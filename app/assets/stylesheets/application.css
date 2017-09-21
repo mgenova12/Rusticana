@@ -13,7 +13,17 @@
  *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *= require less-style
+ *= require style
+ *= require settings
+ *= require prettyPhoto
+ *= require flexslider
  */
+
+a:link {
+  text-decoration: none;
+}
 
 [v-cloak] {
   display: none;
