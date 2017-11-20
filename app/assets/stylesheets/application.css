@@ -120,11 +120,10 @@ a:link {
 }
 
 .chefs-head {
-  height: 200px !important;
-  background-color:white !important;
-  background: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
-  linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%) !important;
-  background-size:50px 50px !important;
+  height: 200px;
+  background-color: white;
+  background: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%), linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+  background-size:50px 50px;
 }
 
 
