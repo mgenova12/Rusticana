@@ -2,7 +2,7 @@
 
 <h1>Add New Special</h1>
 
-    <%= form_for @photo do |f| %>
+    <%= form_for [:admin, @photo] do |f| %>
       <%= render 'shared/errors', object: @photo %>
 
       <div class="form-group">

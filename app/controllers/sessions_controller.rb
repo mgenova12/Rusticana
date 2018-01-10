@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to '/admin_panel'
+      redirect_to '/admin/applications'
     else
       flash[:danger] = 'Invalid email or password!'
       redirect_to '/employee_login'
