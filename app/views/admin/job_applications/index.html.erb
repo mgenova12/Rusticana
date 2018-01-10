@@ -9,6 +9,7 @@
       <th>Last Name</th>
       <th>Position</th>
       <th>Phone Number</th>
+      <th>Date Applied</th>
       <th>View Application</th>
     </tr>
 
@@ -18,6 +19,7 @@
          <td> <%= application.last_name.capitalize %></td>
          <td> <%= application.position.capitalize %></td>
          <td> <%= application.phone_number.capitalize %></td>
+         <td> <%= pretty_date(application.created_at) %></td>
          <td> <%= link_to "View", "applications/#{application.id}" %></td>
       </tr>
 

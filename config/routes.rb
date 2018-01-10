@@ -12,15 +12,17 @@ Rails.application.routes.draw do
   post '/employee_login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  get '/admin_panel' => 'admins#index'
-  get '/admin_panel/applications' => 'admins#applications'
-  get '/admin_panel/applications/:id' => 'admins#applications_show'
+  namespace :admin do 
+    resources :specials, only: [:index, :new, :create, :update, :edit, :destroy]
+
+    get '/applications' => 'job_applications#index'
+    get '/applications/:id' => 'job_applications#show'
+
+  end
 
   get '/apply' => 'applies#new'
   post '/apply' => 'applies#create'
 
-  resources :specials, only: [:new, :create, :update, :edit, :destroy]
-  
   namespace :api do 
     namespace :v1 do 
       get '/specials' => 'specials#index'

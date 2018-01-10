@@ -2,7 +2,7 @@
 
 <h1>Edit Special</h1>
 
-    <%= form_for @special, :url => {:controller => :specials, action: :update} do |f| %>
+    <%= form_for [:admin, @special], :url => {:controller => :specials, action: :update} do |f| %>
       <%= render 'shared/errors', object: @photo %>
 
       <div class="form-group">
@@ -24,7 +24,7 @@
 
     <% end %>
 
-  <%= form_tag "/specials/#{@special.id}", method: :delete do %>
+  <%= form_tag "/admin/specials/#{@special.id}", method: :delete do %>
 
     <button class='btn btn-danger'> DELETE</button>
   <% end %>

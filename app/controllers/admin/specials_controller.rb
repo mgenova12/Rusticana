@@ -1,6 +1,10 @@
-class SpecialsController < ApplicationController
+class Admin::SpecialsController < ApplicationController
   before_action :authenticate_user!
   layout "admin"
+
+  def index 
+    @specials = Special.all
+  end
 
   def new
     @photo = Special.new
@@ -16,7 +20,7 @@ class SpecialsController < ApplicationController
 
     @special.update(photo_params);
 
-    redirect_to '/admin_panel'
+    redirect_to '/admin/specials'
   end
 
 
@@ -24,7 +28,7 @@ class SpecialsController < ApplicationController
     @photo = Special.new(photo_params)
     if @photo.save
       flash[:success] = "The photo was added!"
-      redirect_to '/admin_panel'
+      redirect_to '/admin/specials'
     else
       render 'new'
     end
@@ -36,7 +40,7 @@ class SpecialsController < ApplicationController
 
     @special.destroy
 
-    redirect_to '/admin_panel'
+    redirect_to '/admin/specials'
   end
 
   private
