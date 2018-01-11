@@ -115,6 +115,10 @@ a:link {
   margin-bottom: 20px !important;
 }
 
-.h .dropdown:hover .dropdown-menu {
+.dropdown-md {
+  display: none;
+}
+
+.dropdown:hover .dropdown-md {
   display: block !important;
 }
