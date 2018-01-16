@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   namespace :admin do 
     resources :specials, only: [:index, :new, :create, :update, :edit, :destroy]
-
+    get '/schedule' => 'schedule#index'
     get '/applications' => 'job_applications#index'
     get '/applications/:id' => 'job_applications#show'
 
